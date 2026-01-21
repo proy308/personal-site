@@ -1,0 +1,21 @@
+# CloudCannon Configuration for PrashantRoy.com
+source: /
+output: /
+
+# Tells CloudCannon to treat these as editable pages
+_inputs:
+  title:
+    type: text
+  description:
+    type: textarea
+
+# Identify your two pages
+collections_config:
+  pages:
+    path: /
+    glob: "*.html"
+    output: true
+
+# Enable the Visual Editor
+editor:
+  default_item_editor: visual
