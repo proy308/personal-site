@@ -3,67 +3,659 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Prashant Roy | Strategic Career Transitions</title>
-    <meta name="description" content="LLM from UChicago, law degree from NALSAR. Helping lawyers and specialists pivot into Deal Strategy, VC, Chief of Staff, and international roles.">
+    <title>Prashant Roy</title>
+    <meta name="description" content="Commercial deal strategist at AWS. Alumnus of UChicago Law and NALSAR. Long-distance runner. Founder of the Strategic Pivot Lab.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://prashantroy.com/">
-    <meta property="og:title" content="Prashant Roy | Strategic Career Transitions">
-    <meta property="og:description" content="Alumnus of UChicago and NALSAR. Helping lawyers re-architect their professional brand.">
+    <meta property="og:title" content="Prashant Roy">
+    <meta property="og:description" content="Commercial deal strategist. Long-distance runner. Pivot Lab founder.">
     <meta property="og:image" content="https://prashantroy.com/meta-image.jpg">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:image" content="https://prashantroy.com/meta-image.jpg">
 
-    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        @font-face {
+            font-family: 'Jackwrite';
+            src: url('jackwrite-400-normal.woff2') format('woff2');
+            font-weight: 400; font-style: normal;
+        }
+        @font-face {
+            font-family: 'Jackwrite';
+            src: url('jackwrite-700-normal.woff2') format('woff2');
+            font-weight: 700; font-style: normal;
+        }
+        @font-face {
+            font-family: 'Overused Grotesk';
+            src: url('overused-grotesk_normal_400.woff2') format('woff2');
+            font-weight: 400; font-style: normal;
+        }
+        @font-face {
+            font-family: 'Overused Grotesk';
+            src: url('overused-grotesk_italic_400.woff2') format('woff2');
+            font-weight: 400; font-style: italic;
+        }
+        @font-face {
+            font-family: 'Overused Grotesk';
+            src: url('overused-grotesk_normal_600.woff2') format('woff2');
+            font-weight: 600; font-style: normal;
+        }
+        @font-face {
+            font-family: 'Josefin Sans';
+            src: url('josefin-sans-400-normal.woff2') format('woff2');
+            font-weight: 400; font-style: normal;
+        }
+        @font-face {
+            font-family: 'Josefin Sans';
+            src: url('josefin-sans-600-normal.woff2') format('woff2');
+            font-weight: 600; font-style: normal;
+        }
+
+        :root {
+            --bg:       #19191a;
+            --bg-alpha: #19191aee;
+            --base:     #9fd4df;
+            --text:     #d8eeef;
+            --text-dim: #7ea8b0;
+            --rule:     #fafafa18;
+            --dotted:   #fafafa28;
+            --body:     'Jackwrite', Georgia, serif;
+            --head:     'Overused Grotesk', sans-serif;
+            --label:    'Josefin Sans', sans-serif;
+            --max:      760px;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            background-color: var(--bg);
+            background-image: url('groovepaper.png');
+            background-size: 300px;
+            color: var(--text);
+            font-family: var(--body);
+            font-size: 1.05rem;
+            line-height: 1.65;
+            overflow-x: hidden;
+        }
+
+        .wrap {
+            max-width: var(--max);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* NAV */
+        nav {
+            position: fixed;
+            top: 0; width: 100%;
+            z-index: 100;
+            background-color: var(--bg-alpha);
+            background-image: url('groovepaper.png');
+            background-size: 300px;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px dotted var(--dotted);
+        }
+
+        .nav-inner {
+            max-width: var(--max);
+            margin: 0 auto;
+            padding: 18px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-name {
+            font-family: var(--head);
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--base);
+            text-decoration: none;
+            letter-spacing: 0.01em;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .nav-bracket {
+            font-family: var(--body);
+            font-size: 0.72rem;
+            color: var(--text-dim);
+            line-height: 1.3;
+            white-space: pre;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3px;
+        }
+
+        .nav-links a {
+            font-family: var(--label);
+            font-size: 0.6rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            text-decoration: none;
+            transition: color 0.15s;
+        }
+        .nav-links a:hover { color: var(--base); }
+
+        /* HERO */
+        .hero {
+            padding-top: 136px;
+            padding-bottom: 56px;
+            border-bottom: 1px dotted var(--dotted);
+        }
+
+        .hero-kicker {
+            font-family: var(--label);
+            font-size: 0.62rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-family: var(--head);
+            font-weight: 600;
+            font-size: clamp(1.9rem, 5vw, 3rem);
+            line-height: 1.1;
+            color: var(--base);
+            margin-bottom: 24px;
+            letter-spacing: -0.01em;
+        }
+
+        .hero-bio {
+            font-size: 1rem;
+            color: var(--text);
+            line-height: 1.8;
+            max-width: 580px;
+        }
+
+        .hero-bio strong { color: var(--base); font-weight: 700; }
+
+        /* SECTIONS */
+        .section {
+            padding: 52px 0;
+            border-bottom: 1px dotted var(--dotted);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: baseline;
+            gap: 14px;
+            margin-bottom: 36px;
+            padding-bottom: 14px;
+            border-bottom: 1px dotted var(--dotted);
+        }
+
+        .section-num {
+            font-family: var(--label);
+            font-size: 0.58rem;
+            letter-spacing: 0.16em;
+            color: var(--text-dim);
+        }
+
+        .section-title {
+            font-family: var(--head);
+            font-weight: 600;
+            font-size: 0.72rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--base);
+        }
+
+        /* ARC */
+        .arc-entry {
+            display: grid;
+            grid-template-columns: 68px 1fr;
+            gap: 20px;
+            padding: 18px 0;
+            border-bottom: 1px dotted var(--dotted);
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+        .arc-entry.visible { opacity: 1; transform: translateY(0); }
+
+        .arc-year {
+            font-family: var(--label);
+            font-size: 0.58rem;
+            letter-spacing: 0.06em;
+            color: var(--text-dim);
+            padding-top: 3px;
+            line-height: 1.5;
+        }
+
+        .arc-logo-wrap {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            margin-bottom: 4px;
+        }
+
+        .arc-logo {
+            width: 20px; height: 20px;
+            object-fit: contain;
+            border-radius: 3px;
+            background: rgba(159,212,223,0.07);
+            padding: 2px;
+            border: 1px solid var(--dotted);
+            flex-shrink: 0;
+        }
+
+        .arc-logo-fallback {
+            width: 20px; height: 20px;
+            border-radius: 3px;
+            background: rgba(159,212,223,0.07);
+            border: 1px solid var(--dotted);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--label);
+            font-size: 6.5px;
+            font-weight: 600;
+            color: var(--text-dim);
+            flex-shrink: 0;
+            letter-spacing: 0.03em;
+        }
+
+        .arc-org {
+            font-family: var(--label);
+            font-size: 0.62rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--base);
+        }
+
+        .arc-role {
+            font-family: var(--head);
+            font-weight: 600;
+            font-size: 0.88rem;
+            color: var(--text);
+            margin-bottom: 5px;
+        }
+
+        .arc-desc {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            line-height: 1.7;
+        }
+
+        /* PIVOT */
+        .pivot-block {
+            border: 1px dotted var(--dotted);
+            padding: 36px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pivot-block::after {
+            content: '[ SPL ]';
+            position: absolute;
+            right: 28px; top: 20px;
+            font-family: var(--label);
+            font-size: 0.58rem;
+            letter-spacing: 0.16em;
+            color: var(--rule);
+        }
+
+        .pivot-kicker {
+            font-family: var(--label);
+            font-size: 0.58rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--base);
+            margin-bottom: 10px;
+        }
+
+        .pivot-block h3 {
+            font-family: var(--head);
+            font-weight: 600;
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+            color: var(--text);
+            line-height: 1.25;
+            margin-bottom: 14px;
+        }
+
+        .pivot-block p {
+            font-size: 0.88rem;
+            color: var(--text-dim);
+            line-height: 1.8;
+            max-width: 500px;
+            margin-bottom: 22px;
+        }
+
+        .pivot-link {
+            font-family: var(--label);
+            font-size: 0.62rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--base);
+            text-decoration: none;
+            border-bottom: 1px dotted var(--base);
+            padding-bottom: 2px;
+            transition: opacity 0.2s;
+        }
+        .pivot-link:hover { opacity: 0.65; }
+
+        /* RUNNING */
+        .strava-wrap { display: flex; flex-direction: column; gap: 14px; }
+
+        .strava-context {
+            font-size: 0.88rem;
+            color: var(--text-dim);
+            line-height: 1.7;
+        }
+
+        /* WRITING */
+        .writing-soon {
+            border: 1px dotted var(--dotted);
+            padding: 36px;
+            text-align: center;
+        }
+
+        .ws-kicker {
+            font-family: var(--label);
+            font-size: 0.58rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            margin-bottom: 8px;
+        }
+
+        .writing-soon h3 {
+            font-family: var(--head);
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+
+        .writing-soon p {
+            font-size: 0.83rem;
+            color: var(--text-dim);
+            max-width: 340px;
+            margin: 0 auto;
+            line-height: 1.75;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 44px 0 36px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .footer-name {
+            font-family: var(--head);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--base);
+        }
+
+        .footer-tagline {
+            font-family: var(--label);
+            font-size: 0.58rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            margin-top: 5px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 9px;
+        }
+
+        .footer-links a {
+            font-family: var(--label);
+            font-size: 0.6rem;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            transition: color 0.15s;
+        }
+        .footer-links a:hover { color: var(--base); }
+
+        .footer-copy {
+            width: 100%;
+            font-family: var(--label);
+            font-size: 0.57rem;
+            letter-spacing: 0.08em;
+            color: var(--rule);
+            padding-top: 20px;
+            border-top: 1px dotted var(--dotted);
+        }
+
+        /* ANIMATIONS */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(14px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+        @media (max-width: 560px) {
+            .nav-bracket { display: none; }
+            .nav-links { flex-direction: row; gap: 14px; }
+            .arc-entry { grid-template-columns: 52px 1fr; }
+            .pivot-block { padding: 24px 20px; }
+            .pivot-block::after { display: none; }
+            footer { flex-direction: column; }
+            .footer-links { align-items: flex-start; }
+        }
+    </style>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans leading-relaxed">
+<body>
 
-    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-slate-100">
-        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-xl font-bold tracking-tight text-indigo-600">PRASHANT ROY</a>
-            <div class="space-x-8 text-sm font-medium">
-                <a href="pivot-lab.html" class="bg-indigo-600 text-white px-5 py-2 rounded-lg hover:bg-indigo-700 transition shadow-md shadow-indigo-100">The Pivot Lab</a>
+<nav>
+    <div class="nav-inner">
+        <a href="index.html" class="nav-name">Prashant Roy</a>
+        <div class="nav-right">
+            <span class="nav-bracket">[[&#10;[</span>
+            <div class="nav-links">
+                <a href="#arc">Career</a>
+                <a href="#running">Running</a>
+                <a href="pivot-lab.html">Pivot Lab</a>
+            </div>
+            <span class="nav-bracket">]]&#10;]</span>
+        </div>
+    </div>
+</nav>
+
+<div class="wrap">
+
+    <!-- HERO -->
+    <div class="hero">
+        <p class="hero-kicker">Manchester, UK &nbsp;·&nbsp; Commercial Strategist</p>
+        <h1>Prashant Roy</h1>
+        <p class="hero-bio">
+            I started as a transactional lawyer. I ended up leading complex commercial deals at <strong>AWS</strong> across EMEA and APJ — the kind that require a room full of lawyers, engineers, and finance people to close. The pivot wasn't accidental. It was architected.<br><br>
+            I also run <strong>marathons</strong>, curate a high-trust alumni network, and mentor lawyers who want out of the specialist trap through the <strong>Strategic Pivot Lab</strong>.
+        </p>
+    </div>
+
+    <!-- ARC -->
+    <div class="section" id="arc">
+        <div class="section-header">
+            <span class="section-num">01</span>
+            <span class="section-title">The Arc</span>
+        </div>
+
+        <div class="arc-entry">
+            <div class="arc-year">2004–08</div>
+            <div>
+                <div class="arc-logo-wrap">
+                    <img class="arc-logo" src="https://logo.clearbit.com/nalsar.ac.in" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                    <span class="arc-logo-fallback" style="display:none">NL</span>
+                    <span class="arc-org">NALSAR University of Law</span>
+                </div>
+                <div class="arc-role">LLB</div>
+                <div class="arc-desc">One of India's top national law universities. Formed the intellectual foundation and a network I've been curating ever since.</div>
             </div>
         </div>
-    </nav>
 
-    <header class="pt-32 pb-20 px-6">
-        <div class="max-w-3xl mx-auto">
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-10 tracking-tight leading-tight">
-                Architecting <span class="text-indigo-600">Strategic Transitions.</span>
-            </h1>
-            
-            <div class="space-y-6 text-lg text-slate-600 leading-relaxed">
-                <p>
-                    I'm a transactional lawyer turned commercial strategist. I started in top-tier law firms, moved in-house, and eventually made a pivot most lawyers are told isn't possible: into a deal strategy role at <strong class="text-slate-900">AWS</strong>, working directly with the sales team on the largest and most complex accounts in the region.
-                </p>
-                <p>
-                    That experience—combined with an <strong class="text-slate-900">LLM from the University of Chicago</strong>, an <strong class="text-slate-900">MBA</strong>, and a law degree from <strong class="text-slate-900">NALSAR</strong>—gave me a clear view of what it actually takes for a specialist to cross over into commercial leadership. It's not an MBA. It's not a rebrand. It's knowing how to translate the value of your expertise into the language of the person making the hiring decision.
-                </p>
-                <p>
-                    I work primarily with <strong class="text-slate-900">lawyers</strong>—law firm associates, in-house counsel, and policy specialists—who are trying to make the move into Deal Strategy, Chief of Staff, VC/PE, Legal Operations, or international firms. If you've hit the ceiling of what your current track offers and aren't sure what comes next, that's the conversation I'm built for.
-                </p>
-            </div>
-
-            <div class="mt-12 pt-10 border-t border-slate-200">
-                <a href="pivot-lab.html" class="inline-flex items-center text-indigo-600 font-bold text-lg group">
-                    Explore The Strategic Pivot Lab 
-                    <i class="fa-solid fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
-                </a>
+        <div class="arc-entry">
+            <div class="arc-year">2008–12</div>
+            <div>
+                <div class="arc-logo-wrap">
+                    <img class="arc-logo" src="https://logo.clearbit.com/trilegal.com" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                    <span class="arc-logo-fallback" style="display:none">TL</span>
+                    <span class="arc-org">Trilegal · SNR Associates</span>
+                </div>
+                <div class="arc-role">Capital Markets Lawyer</div>
+                <div class="arc-desc">Top-tier Indian law firms. Transactional work across capital markets and corporate. Learned what deals actually look like from the inside.</div>
             </div>
         </div>
-    </header>
 
-    <footer class="py-16 text-center border-t border-slate-100 bg-white">
-        <div class="max-w-3xl mx-auto px-6">
-            <a href="https://linkedin.com/in/prashantroy" target="_blank" class="inline-flex items-center justify-center bg-[#0077b5] text-white px-6 py-3 rounded-full font-bold transition hover:bg-[#005582] shadow-lg shadow-blue-100 mb-8">
-                <i class="fa-brands fa-linkedin text-xl mr-3"></i>
-                Connect on LinkedIn
+        <div class="arc-entry">
+            <div class="arc-year">2012–13</div>
+            <div>
+                <div class="arc-logo-wrap">
+                    <img class="arc-logo" src="https://logo.clearbit.com/uchicago.edu" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                    <span class="arc-logo-fallback" style="display:none">UC</span>
+                    <span class="arc-org">University of Chicago Law School</span>
+                </div>
+                <div class="arc-role">LLM</div>
+                <div class="arc-desc">International and comparative law. Built the analytical rigour that translates well beyond courtrooms and contracts.</div>
+            </div>
+        </div>
+
+        <div class="arc-entry">
+            <div class="arc-year">2013–17</div>
+            <div>
+                <div class="arc-logo-wrap">
+                    <img class="arc-logo" src="https://logo.clearbit.com/wipro.com" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                    <span class="arc-logo-fallback" style="display:none">WP</span>
+                    <span class="arc-org">Wipro</span>
+                </div>
+                <div class="arc-role">In-House Commercial Lead</div>
+                <div class="arc-desc">Moved from law firm to global tech company. Owned commercial contracts end-to-end. Started to speak P&L, not just legal risk.</div>
+            </div>
+        </div>
+
+        <div class="arc-entry">
+            <div class="arc-year">~2016</div>
+            <div>
+                <div class="arc-logo-wrap">
+                    <span class="arc-logo-fallback" style="display:flex">MB</span>
+                    <span class="arc-org">Executive MBA</span>
+                </div>
+                <div class="arc-role">Concurrent with in-house role</div>
+                <div class="arc-desc">The credential wasn't the point. Understanding how business leaders think was.</div>
+            </div>
+        </div>
+
+        <div class="arc-entry">
+            <div class="arc-year">2017–</div>
+            <div>
+                <div class="arc-logo-wrap">
+                    <img class="arc-logo" src="https://logo.clearbit.com/aws.amazon.com" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                    <span class="arc-logo-fallback" style="display:none">AWS</span>
+                    <span class="arc-org">Amazon Web Services</span>
+                </div>
+                <div class="arc-role">Strategic Customer Engagements</div>
+                <div class="arc-desc">Leading complex, high-value commercial transactions across EMEA and APJ. The deals are large, the stakeholders are senior, and the commercial problems are genuinely hard. This is where the arc was always pointing.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PIVOT LAB -->
+    <div class="section" id="pivotlab">
+        <div class="section-header">
+            <span class="section-num">02</span>
+            <span class="section-title">Strategic Pivot Lab</span>
+        </div>
+        <div class="pivot-block fade-up">
+            <div class="pivot-kicker">Founded by Prashant Roy</div>
+            <h3>For lawyers who've hit the ceiling<br>of what their track offers.</h3>
+            <p>The Specialist Trap is real. You're technically excellent, intellectually credible, and chronically underestimated by people who run P&Ls. The Pivot Lab is a structured 1:1 mentoring programme for lawyers and specialists who want to cross over into Deal Strategy, Chief of Staff, VC, or international commercial roles — and need someone who has actually done it to help them think it through.</p>
+            <a href="pivot-lab.html" class="pivot-link">Explore the Pivot Lab →</a>
+        </div>
+    </div>
+
+    <!-- RUNNING -->
+    <div class="section" id="running">
+        <div class="section-header">
+            <span class="section-num">03</span>
+            <span class="section-title">Running</span>
+        </div>
+        <div class="strava-wrap fade-up">
+            <p class="strava-context">Long-distance runner for 10+ years. Everything else is on Strava.</p>
+            <a style="display:inline-block;background-color:#FC5200;color:#fff;padding:5px 10px 5px 30px;font-size:11px;font-family:Helvetica,Arial,sans-serif;white-space:nowrap;text-decoration:none;background-repeat:no-repeat;background-position:10px center;border-radius:3px;background-image:url('https://badges.strava.com/logo-strava-echelon.png')" href="https://strava.com/athletes/1913092" target="_blank">
+                Follow me on
+                <img src="https://badges.strava.com/logo-strava.png" alt="Strava" style="margin-left:2px;vertical-align:text-bottom" height="13" width="51">
             </a>
-            <p class="text-slate-400 text-sm">© 2026 Prashant Roy. All rights reserved.</p>
         </div>
+    </div>
+
+    <!-- WRITING -->
+    <div class="section" id="writing">
+        <div class="section-header">
+            <span class="section-num">04</span>
+            <span class="section-title">Writing</span>
+        </div>
+        <div class="writing-soon fade-up">
+            <div class="ws-kicker">[ Status ]</div>
+            <h3>Coming soon.</h3>
+            <p>Notes on commercial strategy, career transitions, and what it actually takes to do hard things well. Not content — thinking in public.</p>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div>
+            <div class="footer-name">Prashant Roy</div>
+            <div class="footer-tagline">Manchester, UK &nbsp;·&nbsp; 2026</div>
+        </div>
+        <div class="footer-links">
+            <a href="https://linkedin.com/in/prashantroy" target="_blank">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://strava.com/athletes/1913092" target="_blank">
+                <i class="fa-brands fa-strava"></i> Strava
+            </a>
+            <a href="pivot-lab.html">
+                <i class="fa-solid fa-flask"></i> Pivot Lab
+            </a>
+        </div>
+        <div class="footer-copy">© 2026 Prashant Roy. All rights reserved.</div>
     </footer>
+
+</div>
+
+<script>
+    const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.06, rootMargin: '0px 0px -28px 0px' });
+
+    document.querySelectorAll('.arc-entry').forEach((el, i) => {
+        el.style.transitionDelay = `${i * 55}ms`;
+        obs.observe(el);
+    });
+    document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+</script>
 
 </body>
 </html>
